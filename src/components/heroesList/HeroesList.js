@@ -2,10 +2,9 @@ import {useHttp} from '../../hooks/http.hook';
 import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
-import {createSelector} from 'reselect';
 
-import { fetchedHeroes } from '../../actions';
-import { heroDeleted } from './heroesSlice';
+
+import { heroDeleted, fetchHeroes, filteredHeroesSelector } from './heroesSlice';
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
 
@@ -14,24 +13,13 @@ import './heroesList.scss';
 
 const HeroesList = () => {
 
-    const filteredHeroesSelector = createSelector(
-        state => state.heroes.heroes,
-        state => state.filters.activeFilter,
-        (heroes, filter) => {
-            if (filter === 'all') {
-                return heroes;
-            } else {
-                return heroes.filter(item => item.element === filter);
-            }
-        }
-    )
     const filteredHeroes = useSelector(filteredHeroesSelector);
     const heroesLoadingStatus = useSelector(state => state);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
     useEffect(() => {
-        dispatch(fetchedHeroes(request));
+        dispatch(fetchHeroes());
         
     }, []);
 

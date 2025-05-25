@@ -1,49 +1,60 @@
 {
   "heroes": [
     {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
-      "element": "water"
-    },
-    {
       "id": "df3a201f-798a-4697-b646-1a79247bf1e5",
       "name": "Dunkchump",
       "description": "Achiving aims in long run ",
       "element": "wind"
+    },
+    {
+      "id": "919f4362-622e-4cb4-bdb8-880119ba37dd",
+      "name": "Mistery box",
+      "description": "Contain something hilarious",
+      "element": "fire"
+    },
+    {
+      "id": "5c5dde61-414c-4b44-b6a4-d828787eee72",
+      "name": "[Data removed]",
+      "description": "[Data removed] [Data removed] [Data removed]",
+      "element": "water"
+    },
+    {
+      "id": "48d680b0-869b-4ee3-8fa0-d50f41770194",
+      "name": "Spidermem",
+      "description": "Shoot a net from arm",
+      "element": "earth"
     }
   ],
   "filters": [
     {
       "name": "all",
       "label": "Все",
-      "className": "btn-outline-dark"
+      "className": "btn-outline-dark",
+      "id": 1
     },
     {
       "name": "fire",
       "label": "Огонь",
-      "className": "btn-danger"
+      "className": "btn-danger",
+      "id": 2
     },
     {
       "name": "water",
       "label": "Вода",
-      "className": "btn-primary"
+      "className": "btn-primary",
+      "id": 3
     },
     {
       "name": "wind",
       "label": "Ветер",
-      "className": "btn-success"
+      "className": "btn-success",
+      "id": 4
     },
     {
       "name": "earth",
       "label": "Земля",
-      "className": "btn-secondary"
+      "className": "btn-secondary",
+      "id": 5
     }
   ]
 }
